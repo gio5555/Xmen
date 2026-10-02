@@ -1,0 +1,184 @@
+.titulo-destello {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  
+  /* Degradado metálico con una franja blanca brillante en medio */
+  background: linear-gradient(
+    110deg,
+    #4a5568 0%,
+    #a1a8b8 35%,
+    #ffffff 50%, /* Luz intensa/destello */
+    #a1a8b8 65%,
+    #4a5568 100%
+  );
+  
+  /* Se amplía el tamaño del fondo para poder moverlo */
+  background-size: 200% 100%;
+  
+  /* Recorta el fondo para que tome la forma del texto */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Sombra leve para resaltar el borde metálico */
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
+  
+  /* Animación continua del brillo pasando a través del texto */
+  animation: aparecer 2s forwards, destello 3s infinite linear;
+}
+
+/* Animación que mueve el fondo de izquierda a derecha */
+@keyframes destello {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Animación de entrada (Fade In) */
+.texto-fade {
+  opacity: 0;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.texto{
+    background-color: rgb(204, 171, 235);
+}
+
+
+body{
+
+background-color: rgb(89, 59, 131);
+}
+
+/* Título para la sección */
+.titulo-seccion {
+  color: #13071b;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  border-bottom: 2px solid #1f2b39;
+  padding-bottom: 8px;
+  margin-top: 30px;
+}
+
+/* Cuadrícula contenedora para alinear las imágenes */
+.grid-reparto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Tarjeta individual de cada personaje/actor */
+.tarjeta-actor {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta */
+.tarjeta-actor:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.2);
+}
+
+/* Estilo para ajustar el tamaño de las imágenes */
+.tarjeta-actor img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* Evita que la imagen se deforme o estire */
+}
+
+/* Estilo para los nombres debajo de las imágenes */
+.tarjeta-actor p {
+  margin: 12px 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #c9d1d9;
+  font-family: sans-serif;
+}
+
+.info-adicional {
+  background-color: #626e7d;
+  color: #e6edf3;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #ff4757; /* Borde de acento en tono rojo/coral */
+  margin-top: 20px;
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+
+.texto3{
+
+    background-color: rgb(163, 42, 165);
+}
+
+
+
+.texto4{
+
+
+    background-color: blueviolet;
+}
+
+
+
+.tarjeta-trailer{
+  background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.trailer-info h3 {
+  color: #00d4ff;
+  margin-top: 0;
+  font-family: sans-serif;
+}
+
+.trailer-info p {
+  color: #8b949e;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+.btn-trailer {
+  display: inline-block;
+  background-color: #ff4757;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-trailer:hover {
+  background-color: #ff6b81;
+  transform: scale(1.05);
+}
+
